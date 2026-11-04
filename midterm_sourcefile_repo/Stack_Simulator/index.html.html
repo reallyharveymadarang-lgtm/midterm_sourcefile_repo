@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Simulator</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-secondary text-white d-flex justify-content-center align-items-center vh-100">
+
+    <div class="container text-center" style="max-width: 600px;">
+        <!-- Title -->
+        <div class="bg-dark text-white p-3 mb-0 border-bottom border-secondary">
+            <h3 class="m-0">Stack Data Structure Simulator</h3>
+        </div>
+        
+        <!-- Header Row (Green) -->
+        <div class="row bg-success text-white fw-bold py-2 m-0 text-center">
+            <div class="col-4">Operations</div>
+            <div class="col-4">Stack Data</div>
+            <div class="col-4">Deleted from Stack</div>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row m-0 text-center">
+            <!-- Operations Column (Grey) -->
+            <div class="col-4 bg-secondary p-3 d-flex flex-column justify-content-start align-items-center border-end border-dark" style="height: 250px;">
+                <input type="text" id="inputValue" class="form-control mb-2 text-center" placeholder="Enter value">
+                <button id="pushBtn" class="btn btn-success w-100 mb-2">Push</button>
+                <button id="popBtn" class="btn btn-danger w-100 mb-2">Pop</button>
+                <button id="peekBtn" class="btn btn-warning w-100 mb-2 text-dark">Peek</button>
+                <button id="clearBtn" class="btn btn-light w-100 text-dark">Clear</button>
+            </div>
+
+            <!-- Stack Data Column (Black) -->
+            <div class="col-4 bg-dark p-3 border-end border-secondary" style="height: 250px; overflow-y: auto;">
+                <div id="stackContainer" class="d-flex flex-column-reverse align-items-center w-100">
+                    <!-- Stack items will appear here -->
+                </div>
+            </div>
+
+            <!-- Deleted from Stack Column (Red) -->
+            <div class="col-4 bg-danger p-3 d-flex flex-column justify-content-center align-items-center" style="height: 250px;">
+                <div id="deletedValue" class="fs-4 text-white"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
